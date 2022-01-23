@@ -18,7 +18,9 @@
 
 
 function get_date() {
-    return new Date().toLocaleDateString('he-IL', {timeZone: 'Asia/Jerusalem'});
+    let randomDate = new Date();
+    randomDate.setDate(randomDate.getDate() + Math.floor(Math.random() * 300))
+    return randomDate.toLocaleDateString('he-IL', {timeZone: 'Asia/Jerusalem'});
 }
 
 const HEBREW_KEYMAP = {
